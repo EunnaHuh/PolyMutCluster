@@ -14,10 +14,6 @@ If you have any questions or comments, please feel free to reach out Eunna Huh (
 * [Installation](#Installation)
 <hr style="border:2px solid gray"> </hr>
 
-### Download Code
-```bash
-git clone https://github.com/EunnaHuh/PolyMutcluster
-```
 <hr style="border:2px solid gray"> </hr>
 
 ### Installation
@@ -25,9 +21,9 @@ git clone https://github.com/EunnaHuh/PolyMutcluster
 * [Anaconda](https://docs.anaconda.com/anaconda/install/) or [MiniConda](https://docs.conda.io/en/latest/miniconda.html)
 * python >= 3.7
 
-#### Install environment
+#### Setup
 ```bash
-conda create -n PolyMutCluster python=3.7.4
+conda create -n PolyMutCluster python=3.7.1
 source activate PolyMutCluster
 pip install -r env.txt
 ```
