@@ -12,9 +12,11 @@ If you have any questions or comments, please feel free to reach out Eunna Huh (
 ## Content
 * [Download code](#Download-Code)
 * [Installation](#Installation)
+* [Run PolyMutCluster](#Run-PolyMutCluster)
+* [Input File Formats](#Input-File-Formats)
 <hr style="border:2px solid gray"> </hr>
 
-<hr style="border:2px solid gray"> </hr>
+
 
 ### Installation
 #### Requirements
@@ -28,3 +30,14 @@ source activate PolyMutCluster
 pip install -r env.txt
 ```
 <hr style="border:2px solid gray"> </hr>
+### Run PolyMutCluster
+```bash
+source activate PolyMutCluster
+python PolyMutCluster.py 
+```
+* Arguments
+`-In`  Please type input file directory <br/>
+`-Err` Please select type of error either "SEM":standard error of the mean or "SD":standard deviatio
+<hr style="border:2px solid gray"> </hr>
+
+### Input File Formats
