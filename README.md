@@ -44,12 +44,13 @@ Example:
 python PolyMutCluster.py -In '../exp/Inputdata.csv' -Err 'SEM' -Rep '../exp/Replicate.csv' -Norm 'MinMax'
 ```
 #### Options <br/>
+`-p`  The number of CPU assigned. Default is all available CPU 
 `-itr`  The nummber of error propagated matrix generated. Default is 500 <br/>
 `-k`  The maximum number of K. Default is 3 <br/>
 `-l`  Select linkage method [scipy.cluster.hierarchy.linkage](https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html) <br/>
 `-pdist`  Select distance function [scipy.spatial.distance.pdist](https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.pdist.html) <br/>
-`-log`  If the measurements are in log scale and you want to change them to linear scale, type the names of experiments in list format <br/>
-`-Save_suppl`  If you want to save all error propagated matrix please type 'ON' <br/>
+`-log`  If the measurements are in log scale and you want to change them to linear scale, type the names of experiments <br/>
+`-Save_suppl`  If you want to save all error propagated matrix please type 'ON' <br/> <br/>
 
 <hr style="border:2px solid gray"> </hr>
 
