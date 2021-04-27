@@ -1,6 +1,6 @@
 # PolyMutCluster
 PolyMutCluster provides an analysis pipeline for quantifying the similarity between multi-dimensional protein signaling profiles. <br/>
-This code is rewritten from [Benredjem-Gallion](https://github.com/JonathanGallion/Benredjem-Gallion) to make it widely applicable to any mutagenesis and drug respone data with improved speed by parallel computing. 
+This code is rewritten from [Benredjem-Gallion](https://github.com/JonathanGallion/Benredjem-Gallion) to make it widely applicable to any mutagenesis and drug respone data with improved speed using parallel computing. 
 <hr style="border:2px solid gray"> </hr>
 
 ## Publication
