@@ -13,7 +13,7 @@ If you have any questions or comments, please feel free to reach out Eunna Huh (
 * [Download code](#Download-Code)
 * [Installation](#Installation)
 * [Run PolyMutCluster](#Run-PolyMutCluster)
-* [Input File Formats](#Input-File-Formats)
+* [File Formats](#Input-File-Formats)
 * [Acknowledgement](#Acknowledgement)
 <hr style="border:2px solid gray"> </hr>
 
@@ -46,23 +46,40 @@ Example:
 python PolyMutCluster.py -In '../exp/Inputdata.csv' -Err 'SEM' -Rep '../exp/Replicate.csv' -Norm 'MinMax'
 ```
 #### Options <br/>
-`-p`  The number of CPU assigned. Default is all available CPU <br/>
+`-p`  The number of CPU assigned. Default is to use all available CPU <br/>
 `-itr`  The nummber of error propagated matrix generated. Default is 500 <br/>
 `-k`  The maximum number of K. Default is 3 <br/>
 `-l`  Select linkage method [scipy.cluster.hierarchy.linkage](https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html) <br/>
 `-pdist`  Select distance function [scipy.spatial.distance.pdist](https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.pdist.html) <br/>
-`-log`  If the measurements are in log scale and you want to change them to linear scale, type the names of experiments <br/>
-`-Save_suppl`  If you want to save all error-propagated matrices, type 'ON' <br/> <br/>
+`-log`  If the measurements are in log scale and you want to change them into linear scale, type the names of experiments <br/>
+`-Save_suppl`  If you want to save all error-propagated matrices, type 'ON' <br/> 
+<br/>
+Example:
+```bash
+python PolyMutCluster.py -In <assay readouts file directory> -Err 'SEM' -Rep < replicate file directory> -Norm 'MinMax' -p 4 -iter 1000 -k 7 -l 'ward' -pdist 'euclidean' -log 'EC50' 'tka'  -Save_suppl 'ON'
+```
 
 <hr style="border:2px solid gray"> </hr>
 
-### Input File Formats
-* Input matrix in csv format:
-|Mutation|Exp1_Emax|Exp1_Emax_SEM|Exp1_EC50|Exp1_EC50_SEM|Exp2_Emax|Exp2_Emax_SEM|...|...|ExpN_x|ExpN_x_SEM|
-|:---:|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
-|Mut1|...|...|...|...|...|...|...|...|...|...|
+### File Formats
+* The required information in Inputdata.csv: 
+  - Rows: List of mutations
+  - Columns: List of experiments. Column displaying average is written as the name of assay and parameter, seperated by underscore "_". For instance "cAMP_Emax" or "cAMP_EC50". Column diaplaying either standard deviation (SD) or standard error of the mean (SEM) is written after the names of assay and parameter. For instance "cAMP_Emax_SEM" or "cAMP_EC50_SD"
+  - Values: Average and standard deviation(SE)/standard error of the mean(SEM) from multiple assay readouts.
+
+For reference, see `tutorial/data/inputdata.csv` <br/> <br/>
+
+* The required information in Replicate.csv :
+  - when standard error of the mean (SEM) is inputted as an experimental error, PolyMutCluster need information on the number of repetition performed for each assay to convert standard error of the mean (SEM) tostandard deviation (SD).
+  - when standard deviation (SD) is inputted as an experimental error, you don't need to create Replicate.csv 
+  - Rows: List of mutations
+  - Columns: List of experiments. Column diaplaying standard error of the mean (SEM) is written after the names of assay and parameter. For instance "cAMP_Emax_SEM" or "cAMP_EC50_SEM"
+  - Values: The number of repetition conducted for a experiment
+
+For reference, see `tutorial/data/Replicate.csv` <br/> <br/>
 <hr style="border:2px solid gray"> </hr>
+
 ### Acknowledgement
-[Benredjem-Gallion](https://github.com/JonathanGallion/Benredjem-Gallion): Original dvelopment for PolyMutCluster
+[Benredjem-Gallion](https://github.com/JonathanGallion/Benredjem-Gallion) Original dvelopment for PolyMutCluster
 
 
