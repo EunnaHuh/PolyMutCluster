@@ -12,7 +12,7 @@ If you have any questions or comments, please feel free to contact Eunna Huh (he
 * [Download code](#Download-Code)
 * [Installation](#Installation)
 * [Run PolyMutCluster](#Run-PolyMutCluster)
-* [File Formats](#Input-File-Formats)
+* [File Formats](#File-Formats)
 * [Acknowledgement](#Acknowledgement)
 <hr style="border:2px solid gray"> </hr>
 
