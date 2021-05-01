@@ -60,7 +60,7 @@ python PolyMutCluster.py -In <assay readouts file directory> -Err 'SD'  -Norm 'M
 <br/>
 Example:
 ```bash
-python PolyMutCluster.py -In <assay readouts file directory> -Err 'SEM' -Rep <replicate file directory> -Norm 'MinMax' -p 3 -iter 1000 -k 7 -l 'ward' -pdist 'euclidean' -log 'EC50' 'tka'  -Save_suppl 'ON'
+python PolyMutCluster.py -In <assay readouts file directory> -Err 'SEM' -Rep <replicate file directory> -Norm 'ND' -p 3 -iter 1000 -k 7 -l 'ward' -pdist 'euclidean' -log 'EC50' 'tka'  -Save_suppl 'ON'
 ```
 
 <hr style="border:2px solid gray"> </hr>
