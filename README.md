@@ -2,12 +2,6 @@
 PolyMutCluster provides an analysis pipeline for quantifying the similarity between multi-dimensional protein signaling profiles. It is designed to be widely applicable to any mutagenesis and drug respone data with improved speed using parallel computing.<br/>
 <hr style="border:2px solid gray"> </hr>
 
-## Publication
-Huh E, Gallion J, Lichtarge O. PolyMutCluster: Unsupervised Clustering of Multi-Dimensional Data in Signaling Profiles <br/>
-(submitted)<br/><br/>
-If you have any questions or comments, please feel free to contact Eunna Huh (heo2399@gmail.com)
-<hr style="border:2px solid gray"> </hr>
-
 ## Content
 * [Download code](#Download-Code)
 * [Installation](#Installation)
